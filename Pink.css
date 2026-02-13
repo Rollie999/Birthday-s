@@ -1,0 +1,110 @@
+body {
+    background-color: #ff69b4; 
+    color: #ff0000; 
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.nav-panel {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-panel a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+.message-box {
+    flex: 1;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.pic-box img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.swirl-line {
+    width: 100%;
+    height: 100px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,30 C150,120 350,0 500,30 C650,60 850,120 1000,70 L1200,30" stroke="red" fill="transparent" stroke-width="5"/></svg>');
+    background-repeat: repeat-x;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.twirl-pic {
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    animation: twirl 6s linear infinite;
+}
+
+@keyframes twirl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 20px;
+    user-select: none;
+    animation: floatUp 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+.video-container {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    margin-top: 50px;
+}
+
+.video-caption {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff0000; 
+}
+
+.birthday-video {
+    max-width: 600px;
+    width: 90%;
+    border: 5px solid #ff0000;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends' Birthdays - Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #a8e6cf, #a1c4fd, #c2e9fb, #dcedc1);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            overflow: hidden;
+            font-family: 'Verdana', Geneva, sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+
+        .welcome-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 25px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            color: #2c3e50;
+            line-height: 1.8;
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .active {
+            border-bottom: 2px solid #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="abas.html">Abas</a> 
+        <a href="#">Add Friend +</a>
+    </nav>
+
+    <div class="welcome-container">
+        <h1>This is for my friends. I'll be adding their birthdays and pictures regularly here, when it's their birthdays, to celebrate them.</h1>
+    </div>
+
+</body>
+</html>

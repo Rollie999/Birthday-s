@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Abas!</title>
+    <link rel="stylesheet" href="abas-style.css">
+</head>
+<body>
+
+    <nav class="nav-panel">
+        <a href="index.html">Home</a>
+        <a href="abas.html">Abas' Page</a>
+    </nav>
+
+    <div class="section">
+        <div class="message-box">
+            "This one's a weirdo, but she's a fun weirdo. She was born on valentines day, and she's been a really great friend."
+        </div>
+        <div class="pic-box">
+            <img src="Abas/abas-1.jpg" alt="Abas Photo 1">
+        </div>
+    </div>
+
+    <div class="swirl-line"></div>
+
+    <div class="section">
+        <div class="message-box" style="text-align: center; max-width: 800px;">
+            <p>"Abas, has been a great friend during my time so far here at AOA. She's boisterous, cheery, and is one of the few people I let give me a hug, even when social battery is drained, and I feel to drained to interact with people."</p>
+            <p style="font-weight: bold; font-size: 1.5rem;">Thanks Abas for being you.</p>
+        </div>
+    </div>
+
+    <div class="photo-gallery">
+        <img src="Abas/abas-2.jpg" class="twirl-pic" alt="Abas 2">
+        <img src="Abas/abas-3.jpg" class="twirl-pic" alt="Abas 3" style="animation-delay: 1s;">
+        <img src="Abas/abas-4.jpg" class="twirl-pic" alt="Abas 4" style="animation-delay: 2s;">
+    </div>
+
+    <div class="video-container">
+        <p class="video-caption">"Oh she's also into this."</p>
+        <video controls class="birthday-video">
+            <source src="Abas/abas-vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 300);
+
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll('.nav-panel a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.style.borderBottom = "2px solid white";
+                link.style.color = "#ffffff";
+            }
+        });
+    </script>
+
+</body>
+</html>
