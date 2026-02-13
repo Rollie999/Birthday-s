@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Abas!</title>
-    <link rel="stylesheet" href="abas-style.css">
+    <link rel="stylesheet" href="Pink.css">
 </head>
 <body>
 
@@ -45,27 +45,7 @@
         </video>
     </div>
 
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 300);
-
-        const currentPath = window.location.pathname.split("/").pop();
-        const navLinks = document.querySelectorAll('.nav-panel a');
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.style.borderBottom = "2px solid white";
-                link.style.color = "#ffffff";
-            }
-        });
-    </script>
+     <script src="Abas.js"></script>
 
 </body>
 </html>
